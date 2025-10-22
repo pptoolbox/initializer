@@ -4,7 +4,7 @@
 sudo apt update && sudo apt upgrade -y
 
 # Install/configure utilities
-sudo apt install wget gparted copyq exfat-fuse exfatprogs vlc inkscape kdeconnect preload starship bibata-cursor-theme -y
+sudo apt install wget gparted exfat-fuse exfatprogs vlc inkscape kdeconnect preload starship papirus-icon-theme papirus-colors bibata-cursor-theme -y
 
 sudo systemctl enable preload.service
 
