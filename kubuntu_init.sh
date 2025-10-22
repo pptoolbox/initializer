@@ -22,3 +22,8 @@ rm -r ./*.deb
 sudo apt autoremove -y
 sudo apt clean
 sudo apt autoclean
+
+# Add wallpapers
+sudo mv wallpapers /usr/local/share/
+
+# Done.
