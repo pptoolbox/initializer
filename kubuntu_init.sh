@@ -1,29 +1,84 @@
 #!/bin/bash
 
+# Function to ask for confirmation
+confirm() {
+    while true; do
+        read -p "$1 [Y/n] " response
+        response=${response,,} # Convert to lowercase
+        if [[ -z "$response" ]] || [[ $response =~ ^(yes|y)$ ]]; then
+            return 0
+        elif [[ $response =~ ^(no|n)$ ]]; then
+            return 1
+        else
+            echo "Invalid response. Please answer 'y' or 'n'"
+        fi
+    done
+}
+
 # Update system
-sudo apt update && sudo apt upgrade -y
+if confirm "Do you want to update the system?"; then
+    sudo apt update && sudo apt upgrade -y
+fi
 
 # Install/configure utilities
-sudo apt install wget gparted exfat-fuse exfatprogs vlc inkscape kdeconnect preload starship papirus-icon-theme papirus-colors bibata-cursor-theme -y
+if confirm "Do you want to install utilities?"; then
+    sudo apt install wget gparted exfat-fuse exfatprogs vlc inkscape kdeconnect -y
+fi
 
-sudo systemctl enable preload.service
+# Install themes and cursors
+if confirm "Do you want to install papirus icon theme?"; then
+    sudo apt install papirus-icon-theme papirus-colors -y
+fi
 
-echo eval "$(starship init bash)" >> ~/.bashrc
+if confirm "Do you want to install bibata cursor theme?"; then
+    sudo apt install  bibata-cursor-theme -y
+fi
+
+# Enable preload service
+if confirm "Do you want to enable preload service?"; then
+    sudo apt install preload -y
+    sudo systemctl enable preload.service
+fi
+
+# Configure starship prompt
+if confirm "Do you want to configure starship prompt for bash?"; then
+    sudo apt install starship -y
+    echo eval "$(starship init bash)" >> ~/.bashrc
+fi
 
 # Download & Install necessary programs
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-wget "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" -O vscode-stable_current_amd64.deb
-wget https://github.com/ONLYOFFICE/DesktopEditors/releases/latest/download/onlyoffice-desktopeditors_amd64.deb
+if confirm "Do you want to download and install Chrome?"; then
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
-sudo apt install ./*.deb -y
+    sudo apt install ./google-chrome-stable_current_amd64.deb -y
+    rm google-chrome-stable_current_amd64.deb
+fi
 
-# Remove unnecessary files/packages
-rm -r ./*.deb
-sudo apt autoremove -y
-sudo apt clean
-sudo apt autoclean
+if confirm "Do you want to download and install ONLYOFFICE?"; then
+    wget https://github.com/ONLYOFFICE/DesktopEditors/releases/latest/download/onlyoffice-desktopeditors_amd64.deb
+
+    sudo apt install ./onlyoffice-desktopeditors_amd64.deb -y
+    rm onlyoffice-desktopeditors_amd64.deb
+fi
+
+if confirm "Do you want to download and install VSCode?"; then
+    wget "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" -O vscode-stable_current_amd64.deb
+
+    sudo apt install ./vscode-stable_current_amd64.deb -y
+    rm vscode-stable_current_amd64.deb
+fi
+
+# Cleanup
+if confirm "Do you want to cleanup?"; then
+    sudo apt purge snap snapd plasma-discover-backend-snap -y
+    sudo apt autopurge -y
+    sudo apt clean
+    sudo apt autoclean
+fi
 
 # Add wallpapers
-sudo mv wallpapers /usr/local/share/
+if confirm "Do you want to install wallpapers?"; then
+    sudo mv wallpapers /usr/local/share/
+fi
 
-# Done.
+echo "Kubuntu initialization completed. Enjoy!"
