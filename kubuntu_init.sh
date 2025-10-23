@@ -22,7 +22,7 @@ fi
 
 # Install/configure utilities
 if confirm "Do you want to install utilities?"; then
-    sudo apt install wget gparted exfat-fuse exfatprogs vlc inkscape kdeconnect -y
+    sudo apt install curl wget gparted exfat-fuse exfatprogs vlc inkscape kdeconnect -y
 fi
 
 # Install themes and cursors
@@ -47,11 +47,19 @@ if confirm "Do you want to configure starship prompt for bash?"; then
 fi
 
 # Download & Install necessary programs
-if confirm "Do you want to download and install Chrome?"; then
+if confirm "Do you want to download and install Google Chrome?"; then
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
     sudo apt install ./google-chrome-stable_current_amd64.deb -y
     rm google-chrome-stable_current_amd64.deb
+fi
+
+if confirm "Do you want to download and install Brave Browser?"; then
+    sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+    sudo curl -fsSLo /etc/apt/sources.list.d/brave-browser-release.sources https://brave-browser-apt-release.s3.brave.com/brave-browser.sources
+
+    sudo apt update
+    sudo apt install brave-browser -y
 fi
 
 if confirm "Do you want to download and install ONLYOFFICE?"; then
@@ -61,7 +69,7 @@ if confirm "Do you want to download and install ONLYOFFICE?"; then
     rm onlyoffice-desktopeditors_amd64.deb
 fi
 
-if confirm "Do you want to download and install VSCode?"; then
+if confirm "Do you want to download and install Visual Studio Code?"; then
     wget "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" -O vscode-stable_current_amd64.deb
 
     sudo apt install ./vscode-stable_current_amd64.deb -y
@@ -70,7 +78,7 @@ fi
 
 # Cleanup
 if confirm "Do you want to cleanup?"; then
-    sudo apt purge snap snapd plasma-discover-backend-snap -y
+    sudo apt purge snap snapd plasma-discover-backend-snap htop firefox libreoffice -y
     sudo apt autopurge -y
     sudo apt clean
     sudo apt autoclean
