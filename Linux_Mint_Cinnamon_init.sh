@@ -124,15 +124,10 @@ if confirm "Do you want to remove firefox?"; then
     sudo apt purge firefox -y
 fi
 
-if confirm "Do you want to remove libreoffice?"; then
-    sudo apt purge libreoffice -y
-fi
-
-if confirm "Do you want to cleanup?"; then
-    sudo apt purge thunderbird transmission hexchat remmina warpinator -y
-    sudo apt autopurge -y
-    sudo apt clean
-    sudo apt autoclean
-fi
+# Cleanup (Mandatory)
+sudo apt purge thunderbird transmission hexchat remmina warpinator -y
+sudo apt autopurge -y
+sudo apt clean
+sudo apt autoclean
 
 echo "Linux Mint Cinnamon initialization completed. Enjoy!"
