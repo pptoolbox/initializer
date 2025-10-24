@@ -134,4 +134,4 @@ if confirm "Do you want to cleanup?"; then
     sudo apt autoclean
 fi
 
-echo "Kubuntu initialization completed. Enjoy!"
+echo "Linux Mint Cinnamon initialization completed. Enjoy!"
