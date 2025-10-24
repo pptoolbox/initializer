@@ -22,7 +22,7 @@ fi
 
 # Install/configure utilities
 if confirm "Do you want to install utilities?"; then
-    sudo apt install curl wget gparted exfat-fuse exfatprogs vlc inkscape kdeconnect -y
+    sudo apt install curl wget gparted exfat-fuse exfatprogs vlc kdeconnect -y
 fi
 
 # Install themes and cursors
@@ -74,6 +74,10 @@ if confirm "Do you want to download and install Visual Studio Code?"; then
 
     sudo apt install ./vscode-stable_current_amd64.deb -y
     rm vscode-stable_current_amd64.deb
+fi
+
+if confirm "Do you want to install Inkscape?"; then
+    sudo apt install inkscape -y
 fi
 
 # Cleanup
