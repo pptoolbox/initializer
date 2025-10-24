@@ -141,17 +141,15 @@ if confirm "Do you want to install wallpapers?"; then
 fi
 
 # Cleanup
-
 if confirm "Do you want to remove firefox?"; then
     sudo snap remove --purge firefox
     sudo apt purge firefox -y
 fi
 
-if confirm "Do you want to cleanup?"; then
-    sudo apt purge snap snapd htop totem -y
-    sudo apt autopurge -y
-    sudo apt clean
-    sudo apt autoclean
-fi
+# Mandetory cleanup
+sudo apt purge snap snapd htop totem -y
+sudo apt autopurge -y
+sudo apt clean
+sudo apt autoclean
 
 echo "Ubuntu initialization completed. Enjoy!"
