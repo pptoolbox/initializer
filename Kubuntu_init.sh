@@ -65,11 +65,12 @@ if confirm "Do you want to download and install Brave Browser?"; then
     sudo apt install brave-browser -y
 fi
 
-if confirm "Do you want to download and install ONLYOFFICE?"; then
+if confirm "Do you want to download and install ONLYOFFICE (MS Office Alternative)?"; then
     wget https://github.com/ONLYOFFICE/DesktopEditors/releases/latest/download/onlyoffice-desktopeditors_amd64.deb
 
     sudo apt install ./onlyoffice-desktopeditors_amd64.deb -y
     rm onlyoffice-desktopeditors_amd64.deb
+    sudo apt purge libreoffice -y
 fi
 
 if confirm "Do you want to download and install Visual Studio Code?"; then
@@ -98,11 +99,10 @@ if confirm "Do you want to remove libreoffice?"; then
     sudo apt purge libreoffice -y
 fi
 
-if confirm "Do you want to cleanup?"; then
-    sudo apt purge snap snapd plasma-discover-backend-snap htop -y
-    sudo apt autopurge -y
-    sudo apt clean
-    sudo apt autoclean
-fi
+#Cleanup (Mandatory)
+sudo apt purge snap snapd plasma-discover-backend-snap htop -y
+sudo apt autopurge -y
+sudo apt clean
+sudo apt autoclean
 
 echo "Kubuntu initialization completed. Enjoy!"
