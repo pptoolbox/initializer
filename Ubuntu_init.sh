@@ -83,6 +83,57 @@ if confirm "Do you want to install Inkscape?"; then
     sudo apt install inkscape -y
 fi
 
+if confirm "Do you want to change screenshot/screencast utility to flameshot/kazam?"; then
+    sudo apt install flameshot kazam -y
+    
+    # Disable default GNOME screenshot bindings
+    gsettings set org.gnome.settings-daemon.plugins.media-keys screenshot "[]"
+    gsettings set org.gnome.settings-daemon.plugins.media-keys area-screenshot "[]"
+    gsettings set org.gnome.settings-daemon.plugins.media-keys window-screenshot "[]"
+
+    # Read existing custom keybindings
+    current_list=$(gsettings get org.gnome.settings-daemon.plugins.media-keys custom-keybindings | tr -d "[]' ")
+    new_list=""
+
+    add_binding() {
+        id=$1
+        name=$2
+        command=$3
+        binding=$4
+
+        path="/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/$id/"
+
+        gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$path name "$name"
+        gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$path command "$command"
+        gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$path binding "['$binding']"
+
+        # Append to list
+        if [ -z "$new_list" ]; then
+            new_list="'$path'"
+        else
+            new_list="$new_list, '$path'"
+        fi
+    }
+
+    # Add Flameshot and Kazam shortcuts
+    add_binding "custom_flameshot" "Flameshot GUI" "flameshot gui" "Print"
+    add_binding "custom_kazam" "Kazam Recorder" "kazam" "<Shift>Print"
+
+    # Merge with any existing custom shortcuts
+    if [ -n "$current_list" ]; then
+        final_list="[$current_list, $new_list]"
+    else
+        final_list="[$new_list]"
+    fi
+
+    # Apply the list
+    gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "$final_list"
+
+    # Remove gnome-screenshot
+    sudo apt purge gnome-screenshot -y
+fi
+
+
 # Add wallpapers
 if confirm "Do you want to install wallpapers?"; then
     sudo mv wallpapers /usr/local/share/
