@@ -124,7 +124,7 @@ if confirm "Do you want to remove firefox?"; then
     sudo apt purge firefox -y
 fi
 
-# Cleanup (Mandatory)
+# Mandatory cleanup
 sudo apt purge thunderbird transmission hexchat remmina warpinator -y
 sudo apt autopurge -y
 sudo apt clean
