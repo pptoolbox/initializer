@@ -89,12 +89,6 @@ if confirm "Do you want to install wallpapers?"; then
     sudo mv wallpapers /usr/local/share/
 fi
 
-# Cleanup
-if confirm "Do you want to remove firefox?"; then
-    sudo snap remove --purge firefox
-    sudo apt purge firefox -y
-fi
-
 # Mandatory cleanup
 sudo apt purge snap snapd plasma-discover-backend-snap htop -y
 sudo apt autopurge -y
