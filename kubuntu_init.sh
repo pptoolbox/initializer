@@ -15,9 +15,12 @@ confirm() {
     done
 }
 
+# Update package lists(Mandatory)
+sudo apt update
+
 # Update system
 if confirm "Do you want to update the system?"; then
-    sudo apt update && sudo apt upgrade -y
+    sudo apt full-upgrade -y
 fi
 
 # Install/configure utilities
