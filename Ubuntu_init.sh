@@ -70,6 +70,7 @@ if confirm "Do you want to download and install ONLYOFFICE (MS Office Alternativ
 
     sudo apt install ./onlyoffice-desktopeditors_amd64.deb -y
     rm onlyoffice-desktopeditors_amd64.deb
+    sudo apt purge libreoffice -y
 fi
 
 if confirm "Do you want to download and install Visual Studio Code?"; then
@@ -85,7 +86,7 @@ fi
 
 if confirm "Do you want to change screenshot/screencast utility to flameshot/kazam?"; then
     sudo apt install flameshot kazam -y
-    
+
     # Disable default GNOME screenshot bindings
     gsettings set org.gnome.settings-daemon.plugins.media-keys screenshot "[]"
     gsettings set org.gnome.settings-daemon.plugins.media-keys area-screenshot "[]"
@@ -144,10 +145,6 @@ fi
 if confirm "Do you want to remove firefox?"; then
     sudo snap remove --purge firefox
     sudo apt purge firefox -y
-fi
-
-if confirm "Do you want to remove libreoffice?"; then
-    sudo apt purge libreoffice -y
 fi
 
 if confirm "Do you want to cleanup?"; then
