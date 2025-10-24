@@ -95,11 +95,7 @@ if confirm "Do you want to remove firefox?"; then
     sudo apt purge firefox -y
 fi
 
-if confirm "Do you want to remove libreoffice?"; then
-    sudo apt purge libreoffice -y
-fi
-
-#Cleanup (Mandatory)
+# Mandatory cleanup
 sudo apt purge snap snapd plasma-discover-backend-snap htop -y
 sudo apt autopurge -y
 sudo apt clean
