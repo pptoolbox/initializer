@@ -61,7 +61,7 @@ if confirm "Do you want to download and install ONLYOFFICE (MS Office Alternativ
 
     sudo apt install ./onlyoffice-desktopeditors_amd64.deb -y
     rm onlyoffice-desktopeditors_amd64.deb
-    sudo apt purge libreoffice -y
+    sudo apt purge libreoffice libreoffice-* -y
 fi
 
 if confirm "Do you want to download and install Visual Studio Code?"; then
@@ -148,7 +148,7 @@ if confirm "Do you want to remove firefox?"; then
 fi
 
 # Mandatory cleanup
-sudo apt purge thunderbird transmission hexchat remmina warpinator -y
+sudo apt purge thunderbird transmission hexchat remmina warpinator xviewer -y
 sudo apt autopurge -y
 sudo apt clean
 sudo apt autoclean
