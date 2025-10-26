@@ -70,7 +70,7 @@ if confirm "Do you want to download and install ONLYOFFICE (MS Office Alternativ
 
     sudo apt install ./onlyoffice-desktopeditors_amd64.deb -y
     rm onlyoffice-desktopeditors_amd64.deb
-    sudo apt purge libreoffice -y
+    sudo apt purge libreoffice libreoffice-* -y
 fi
 
 if confirm "Do you want to download and install Visual Studio Code?"; then
@@ -87,6 +87,30 @@ fi
 # Add wallpapers
 if confirm "Do you want to install wallpapers?"; then
     sudo mv wallpapers /usr/local/share/
+fi
+
+
+# Create SCleaner script and desktop entry
+if confirm "Do you want to install SCleaner?"; then
+    mkdir -p ~/.local/bin
+echo "#!/bin/bash
+sudo apt update
+sudo apt autopurg -y
+sudo apt autoclean -y
+sudo apt clean -y
+echo "System cleanup completed."" >> ~/.local/bin/scleaner.sh
+
+chmod +x ~/.local/bin/scleaner.sh
+
+echo "[Desktop Entry]
+Version=1.0
+Type=Application
+Name=SCleaner
+Comment=Clean up system cache and unnecessary files
+Exec=/home/$USER/.local/bin/scleaner.sh
+Icon=sweeper
+Terminal=true
+Categories=Utility;" >> ~/.local/share/applications/scleaner.desktop
 fi
 
 # Mandatory cleanup
