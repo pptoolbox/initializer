@@ -119,6 +119,7 @@ if confirm "Do you want to install wallpapers?"; then
     sudo mv wallpapers /usr/local/share/
 fi
 
+# Create SCleaner script & desktop entry
 if confirm "Do you want to install SCleaner? (Recommended)"; then
     mkdir -p ~/.local/bin
 echo "#!/bin/bash
