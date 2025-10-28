@@ -25,7 +25,7 @@ fi
 
 # Install/configure utilities
 if confirm "Do you want to install utilities?"; then
-    sudo apt install curl wget gparted exfat-fuse exfatprogs vlc kdeconnect -y
+    sudo apt install curl wget gnome-disk-utility exfat-fuse exfatprogs vlc kdeconnect -y
 fi
 
 # Install themes and cursors
@@ -95,7 +95,7 @@ if confirm "Do you want to install SCleaner?"; then
     mkdir -p ~/.local/bin
 echo "#!/bin/bash
 sudo apt update
-sudo apt autopurg -y
+sudo apt autopurge -y
 sudo apt autoclean -y
 sudo apt clean -y
 echo "System cleanup completed."" >> ~/.local/bin/scleaner.sh
