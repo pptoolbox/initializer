@@ -124,7 +124,7 @@ if confirm "Do you want to install SCleaner? (Recommended)"; then
     mkdir -p ~/.local/bin
 echo "#!/bin/bash
 sudo apt update
-sudo apt autopurg -y
+sudo apt autopurge -y
 sudo apt autoclean -y
 sudo apt clean -y
 echo "System cleanup completed."" >> ~/.local/bin/scleaner.sh
@@ -148,7 +148,7 @@ if confirm "Do you want to remove firefox?"; then
 fi
 
 # Mandatory cleanup
-sudo apt purge thunderbird transmission hexchat remmina warpinator xviewer -y
+sudo apt purge thunderbird transmission hexchat remmina warpinator xviewer gparted -y
 sudo apt autopurge -y
 sudo apt clean
 sudo apt autoclean
