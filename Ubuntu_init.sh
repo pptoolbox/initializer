@@ -94,7 +94,7 @@ if confirm "Do you want to install SCleaner?"; then
     mkdir -p ~/.local/bin
 echo "#!/bin/bash
 sudo apt update
-sudo apt autopurg -y
+sudo apt autopurge -y
 sudo apt autoclean -y
 sudo apt clean -y
 echo "System cleanup completed."" >> ~/.local/bin/scleaner.sh
