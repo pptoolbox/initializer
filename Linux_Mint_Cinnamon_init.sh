@@ -65,6 +65,7 @@ if confirm "Do you want to download and install ONLYOFFICE (MS Office Alternativ
 fi
 
 if confirm "Do you want to download and install Visual Studio Code?"; then
+    sudo apt install build-essential make cmake gcc g++ -y
     wget "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" -O vscode-stable_current_amd64.deb
 
     sudo apt install ./vscode-stable_current_amd64.deb -y
