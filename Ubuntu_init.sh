@@ -25,7 +25,7 @@ fi
 
 # Install/configure utilities
 if confirm "Do you want to install utilities?"; then
-    sudo apt install curl wget gnome-disk-utility exfat-fuse exfatprogs showtime rhythmbox gnome-shell-extensions gnome-shell-extension-gpaste gnome-shell-extension-ubuntu-tiling-assistant gnome-tweaks -y
+    sudo apt install curl wget gnome-disk-utility exfat-fuse exfatprogs showtime rhythmbox gnome-extensions gnome-shell-extension-gpaste gnome-shell-extension-ubuntu-tiling-assistant gnome-tweaks gnome-shell-extension-gsconnect -y
 fi
 
 # Install themes and cursors
