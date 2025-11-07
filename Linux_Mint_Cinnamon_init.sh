@@ -28,12 +28,6 @@ if confirm "Do you want to install utilities?"; then
     sudo apt install curl wget exfat-fuse exfatprogs -y
 fi
 
-# Enable preload service
-if confirm "Do you want to enable preload service?"; then
-    sudo apt install preload -y
-    sudo systemctl enable preload.service
-fi
-
 # Configure starship prompt
 if confirm "Do you want to configure starship prompt for bash?"; then
     sudo apt install starship -y
