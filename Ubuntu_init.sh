@@ -37,12 +37,6 @@ if confirm "Do you want to install bibata cursor theme?"; then
     sudo apt install  bibata-cursor-theme -y
 fi
 
-# Enable preload service
-if confirm "Do you want to enable preload service?"; then
-    sudo apt install preload -y
-    sudo systemctl enable preload.service
-fi
-
 # Configure starship prompt
 if confirm "Do you want to configure starship prompt for bash?"; then
     sudo apt install starship -y
