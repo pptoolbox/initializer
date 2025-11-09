@@ -15,18 +15,14 @@ confirm() {
     done
 }
 
-# Update package lists(Mandatory)
+# Upgrade System (Mandatory)
 sudo apt update
 
-# Update system
-if confirm "Do you want to update the system?"; then
-    sudo apt full-upgrade -y
-fi
+# Update system packages (Mandatory)
+sudo apt full-upgrade -y
 
-# Install/configure utilities
-if confirm "Do you want to install utilities?"; then
-    sudo apt install curl wget gnome-disk-utility exfat-fuse exfatprogs vlc kdeconnect -y
-fi
+# Install/configure utilities (Mandatory)
+sudo apt install curl wget partitionmanager filelight exfat-fuse exfatprogs vlc kdeconnect -y
 
 # Install themes and cursors
 if confirm "Do you want to install papirus icon theme?"; then
