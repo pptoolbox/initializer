@@ -15,18 +15,14 @@ confirm() {
     done
 }
 
-# Update package lists(Mandatory)
+# Update package lists (Mandatory)
 sudo apt update
 
-# Update system
-if confirm "Do you want to update the system?"; then
-    sudo apt full-upgrade -y
-fi
+# Update system packages (Mandatory)
+sudo apt full-upgrade -y
 
-# Install/configure utilities
-if confirm "Do you want to install utilities?"; then
-    sudo apt install curl wget gparted exfat-fuse exfatprogs showtime rhythmbox gnome-extensions gnome-shell-extension-gpaste gnome-shell-extension-ubuntu-tiling-assistant gnome-tweaks gnome-shell-extension-gsconnect -y
-fi
+# Install/configure utilities and extensions (Mandatory)
+sudo apt install curl wget gparted exfat-fuse exfatprogs showtime rhythmbox gnome-extensions gnome-shell-extension-gpaste gnome-shell-extension-ubuntu-tiling-assistant gnome-tweaks gnome-shell-extension-gsconnect -y
 
 # Install themes and cursors
 if confirm "Do you want to install papirus icon theme?"; then
