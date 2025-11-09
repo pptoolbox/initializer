@@ -25,7 +25,7 @@ fi
 
 # Install/configure utilities
 if confirm "Do you want to install utilities?"; then
-    sudo apt install curl wget gnome-disk-utility exfat-fuse exfatprogs showtime rhythmbox gnome-extensions gnome-shell-extension-gpaste gnome-shell-extension-ubuntu-tiling-assistant gnome-tweaks gnome-shell-extension-gsconnect -y
+    sudo apt install curl wget gparted exfat-fuse exfatprogs showtime rhythmbox gnome-extensions gnome-shell-extension-gpaste gnome-shell-extension-ubuntu-tiling-assistant gnome-tweaks gnome-shell-extension-gsconnect -y
 fi
 
 # Install themes and cursors
@@ -113,7 +113,7 @@ if confirm "Do you want to install wallpapers?"; then
 fi
 
 # Mandetory cleanup
-sudo apt purge snap snapd htop totem -y
+sudo apt purge snap snapd htop -y
 sudo apt autopurge -y
 sudo apt clean
 sudo apt autoclean
