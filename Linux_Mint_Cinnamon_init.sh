@@ -15,18 +15,14 @@ confirm() {
     done
 }
 
-# Update package lists(Mandatory)
+# Update package lists (Mandatory)
 sudo apt update
 
-# Update system
-if confirm "Do you want to update the system?"; then
-    sudo apt full-upgrade -y
-fi
+# Update system packages (Mandatory)
+sudo apt full-upgrade -y
 
-# Install/configure utilities
-if confirm "Do you want to install utilities?"; then
-    sudo apt install curl wget exfat-fuse exfatprogs -y
-fi
+# Install/configure utilities (Mandatory)
+sudo apt install curl wget gparted exfat-fuse exfatprogs -y
 
 # Configure starship prompt
 if confirm "Do you want to configure starship prompt for bash?"; then
@@ -70,40 +66,8 @@ if confirm "Do you want to install Inkscape?"; then
     sudo apt install inkscape -y
 fi
 
-if confirm "Do you want to change screenshot/screencast utility to flameshot/kazam?"; then
+if confirm "Do you want to change screenshot/screenrecord utility to flameshot/kazam?"; then
     sudo apt install flameshot kazam -y
-    # Disable default screenshot shortcuts
-    gsettings set org.cinnamon.desktop.keybindings.media-keys screenshot "[]"
-    gsettings set org.cinnamon.desktop.keybindings.media-keys window-screenshot "[]"
-    gsettings set org.cinnamon.desktop.keybindings.media-keys area-screenshot "[]"
-
-    # Prepare the custom list
-    CUSTOM_LIST=$(gsettings get org.cinnamon.desktop.keybindings.custom-list | tr -d "[]'")
-    NEW_ENTRIES=()
-
-    # Function to add a new custom binding
-    add_binding() {
-        ID=$1
-        NAME=$2
-        CMD=$3
-        KEY=$4
-
-        gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/$ID/ name "$NAME"
-        gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/$ID/ command "$CMD"
-        gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/$ID/ binding "['$KEY']"
-
-        NEW_ENTRIES+=("'$ID'")
-    }
-
-    # Add Flameshot (Print)
-    add_binding "custom_flameshot" "Flameshot GUI" "flameshot gui" "Print"
-
-    # Add Kazam (Shift+Print)
-    add_binding "custom_kazam" "Kazam Recorder" "kazam" "<Shift>Print"
-
-    # Merge with existing custom list
-    ALL=$(echo $CUSTOM_LIST ${NEW_ENTRIES[@]} | tr ' ' ',')
-    gsettings set org.cinnamon.desktop.keybindings.custom-list "[$ALL]"
 
     # Remove gnome-screenshot
     sudo apt purge gnome-screenshot -y
@@ -143,7 +107,7 @@ if confirm "Do you want to remove firefox?"; then
 fi
 
 # Mandatory cleanup
-sudo apt purge thunderbird transmission hexchat remmina warpinator xviewer gparted -y
+sudo apt purge thunderbird transmission hexchat remmina warpinator xviewer gnome-disk-utility -y
 sudo apt autopurge -y
 sudo apt clean
 sudo apt autoclean
