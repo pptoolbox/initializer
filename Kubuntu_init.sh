@@ -75,6 +75,11 @@ if confirm "Do you want to install Inkscape?"; then
     sudo apt install inkscape -y
 fi
 
+# Install Yakuake (Dropdown terminal emulator)
+if confirm "Do you want to install Yakuake (dropdown terminal emulator)?"; then
+    sudo apt install yakuake -y
+fi
+
 # Add wallpapers
 if confirm "Do you want to install wallpapers?"; then
     sudo mv wallpapers /usr/local/share/
