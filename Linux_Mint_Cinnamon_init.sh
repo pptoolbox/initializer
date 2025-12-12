@@ -73,6 +73,28 @@ if confirm "Do you want to change screenshot/screenrecord utility to flameshot/k
     sudo apt purge gnome-screenshot -y
 fi
 
+# Install Espanso (text expander)
+if confirm "Do you want to install Espanso (text expander)?"; then
+    if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
+        # Install Espanso for Wayland
+        wget https://github.com/espanso/espanso/releases/latest/download/espanso-debian-wayland-amd64.deb
+        sudo apt install espanso-debian-wayland-amd64.deb -y
+        rm espanso-debian-wayland-amd64.deb
+    else
+        # Install Espanso for X11
+        wget https://github.com/espanso/espanso/releases/latest/download/espanso-debian-x11-amd64.deb
+        sudo apt install espanso-debian-x11-amd64.deb -y
+        rm espanso-debian-x11-amd64.deb
+    fi
+    espanso service register
+    espanso start
+fi
+
+# Install Espanso Shortcode Manager (TUI for Espanso)
+if confirm "Do you want to install Espanso Shortcode Manager/ESC (TUI for Espanso)?"; then
+    sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/pptoolbox/esc/main/install.sh)"
+fi
+
 # Add wallpapers
 if confirm "Do you want to install wallpapers?"; then
     sudo mv wallpapers /usr/local/share/
