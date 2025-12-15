@@ -7,13 +7,14 @@
    viewBox="0 0 507.99999 285.75"
    version="1.1"
    id="svg1"
-   inkscape:export-filename="quotes_light.png"
+   inkscape:export-filename="quotes_dark.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
    sodipodi:docname="quotes_raw.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
@@ -26,132 +27,442 @@
      inkscape:pagecheckerboard="1"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.33005036"
-     inkscape:cx="971.06393"
-     inkscape:cy="499.92371"
+     inkscape:zoom="0.2727114"
+     inkscape:cx="755.37729"
+     inkscape:cy="414.35745"
      inkscape:window-width="1366"
      inkscape:window-height="718"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     showgrid="false" />
   <defs
-     id="defs1" />
+     id="defs1">
+    <linearGradient
+       id="linearGradient19"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#e8e8e8;stop-opacity:1;"
+         offset="0"
+         id="stop19" />
+      <stop
+         style="stop-color:#b0b0b0;stop-opacity:1;"
+         offset="1"
+         id="stop20" />
+    </linearGradient>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath19">
+      <path
+         style="fill:#bfbfbf;fill-opacity:1;stroke:#ffffff;stroke-width:3.96875;stroke-dasharray:none;stroke-opacity:1"
+         d="M -2.2489583,285.75 H 505.75104 V 100.10149 L 489.27893,62.329422 394.11526,242.62606 319.99668,123.84399 240.64958,214.0393 211.82193,168.37755 149.25367,238.58558 124.56414,204.68152 62.043225,264.88858 43.059024,233.15418 -2.2489583,285.75"
+         id="path19"
+         sodipodi:nodetypes="ccccccccccccc"
+         inkscape:label="trend" />
+    </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient19"
+       id="linearGradient20"
+       x1="250.8307"
+       y1="66.355324"
+       x2="252.54729"
+       y2="285.75009"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient19"
+       id="linearGradient36"
+       gradientUnits="userSpaceOnUse"
+       x1="250.8307"
+       y1="66.355324"
+       x2="252.54729"
+       y2="285.75009" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient19"
+       id="linearGradient37"
+       gradientUnits="userSpaceOnUse"
+       x1="250.8307"
+       y1="66.355324"
+       x2="252.54729"
+       y2="285.75009" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient19"
+       id="linearGradient38"
+       gradientUnits="userSpaceOnUse"
+       x1="250.8307"
+       y1="66.355324"
+       x2="252.54729"
+       y2="285.75009" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient19"
+       id="linearGradient39"
+       gradientUnits="userSpaceOnUse"
+       x1="250.8307"
+       y1="66.355324"
+       x2="252.54729"
+       y2="285.75009" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient19"
+       id="linearGradient40"
+       gradientUnits="userSpaceOnUse"
+       x1="250.8307"
+       y1="66.355324"
+       x2="252.54729"
+       y2="285.75009" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient19"
+       id="linearGradient41"
+       gradientUnits="userSpaceOnUse"
+       x1="250.8307"
+       y1="66.355324"
+       x2="252.54729"
+       y2="285.75009" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient19"
+       id="linearGradient42"
+       gradientUnits="userSpaceOnUse"
+       x1="250.8307"
+       y1="66.355324"
+       x2="252.54729"
+       y2="285.75009" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient19"
+       id="linearGradient43"
+       gradientUnits="userSpaceOnUse"
+       x1="250.8307"
+       y1="66.355324"
+       x2="252.54729"
+       y2="285.75009" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient19"
+       id="linearGradient44"
+       gradientUnits="userSpaceOnUse"
+       x1="250.8307"
+       y1="66.355324"
+       x2="252.54729"
+       y2="285.75009" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient19"
+       id="linearGradient45"
+       gradientUnits="userSpaceOnUse"
+       x1="250.8307"
+       y1="66.355324"
+       x2="252.54729"
+       y2="285.75009" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient19"
+       id="linearGradient46"
+       gradientUnits="userSpaceOnUse"
+       x1="250.8307"
+       y1="66.355324"
+       x2="252.54729"
+       y2="285.75009" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient19"
+       id="linearGradient47"
+       gradientUnits="userSpaceOnUse"
+       x1="250.8307"
+       y1="66.355324"
+       x2="252.54729"
+       y2="285.75009" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient19"
+       id="linearGradient48"
+       gradientUnits="userSpaceOnUse"
+       x1="250.8307"
+       y1="66.355324"
+       x2="252.54729"
+       y2="285.75009" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient19"
+       id="linearGradient49"
+       gradientUnits="userSpaceOnUse"
+       x1="250.8307"
+       y1="66.355324"
+       x2="252.54729"
+       y2="285.75009" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient19"
+       id="linearGradient50"
+       gradientUnits="userSpaceOnUse"
+       x1="250.8307"
+       y1="66.355324"
+       x2="252.54729"
+       y2="285.75009" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient19"
+       id="linearGradient51"
+       gradientUnits="userSpaceOnUse"
+       x1="250.8307"
+       y1="66.355324"
+       x2="252.54729"
+       y2="285.75009" />
+  </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     style="mix-blend-mode:normal">
     <rect
-       style="fill:#e8e8e8;stroke-width:0;fill-opacity:1;stroke:none;stroke-dasharray:none"
+       style="display:inline;fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
        id="rect1"
-       width="508"
-       height="285.75"
-       x="0"
-       y="0"
+       width="507.74118"
+       height="285.56296"
+       x="0.2587446"
+       y="7.2269968e-18"
        inkscape:label="bg" />
     <g
-       id="g11"
-       inkscape:label="quotes"
-       style="fill:#171717;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none">
+       id="g17"
+       inkscape:label="columns"
+       transform="matrix(0.99633915,0,0,0.99934542,2.5065569,0)"
+       clip-path="url(#clipPath19)"
+       style="display:inline;fill:url(#linearGradient20);fill-opacity:1">
+      <rect
+         style="fill:url(#linearGradient36);fill-opacity:1;stroke-width:0"
+         id="rect2"
+         width="29.36875"
+         height="285.75"
+         x="-1.7763568e-15"
+         y="-2.8421709e-14" />
+      <rect
+         style="fill:url(#linearGradient37);fill-opacity:1;stroke-width:0"
+         id="rect3"
+         width="29.36875"
+         height="285.75"
+         x="33.866665"
+         y="-2.8421709e-14" />
+      <rect
+         style="fill:url(#linearGradient38);fill-opacity:1;stroke-width:0"
+         id="rect4"
+         width="29.36875"
+         height="285.75"
+         x="67.73333"
+         y="-2.8421709e-14" />
+      <rect
+         style="fill:url(#linearGradient39);fill-opacity:1;stroke-width:0"
+         id="rect5"
+         width="29.36875"
+         height="285.75"
+         x="101.6"
+         y="-2.8421709e-14" />
+      <rect
+         style="fill:url(#linearGradient40);fill-opacity:1;stroke-width:0"
+         id="rect6"
+         width="29.36875"
+         height="285.75"
+         x="101.6"
+         y="-2.8421709e-14" />
+      <rect
+         style="fill:url(#linearGradient41);fill-opacity:1;stroke-width:0"
+         id="rect7"
+         width="29.36875"
+         height="285.75"
+         x="135.46666"
+         y="-2.8421709e-14" />
+      <rect
+         style="fill:url(#linearGradient42);fill-opacity:1;stroke-width:0"
+         id="rect8"
+         width="29.36875"
+         height="285.75"
+         x="169.33333"
+         y="-2.8421709e-14" />
+      <rect
+         style="fill:url(#linearGradient43);fill-opacity:1;stroke-width:0"
+         id="rect9"
+         width="29.36875"
+         height="285.75"
+         x="203.2"
+         y="-2.8421709e-14" />
+      <rect
+         style="fill:url(#linearGradient44);fill-opacity:1;stroke-width:0"
+         id="rect10"
+         width="29.36875"
+         height="285.75"
+         x="237.06667"
+         y="-2.8421709e-14" />
+      <rect
+         style="fill:url(#linearGradient45);fill-opacity:1;stroke-width:0"
+         id="rect11"
+         width="29.36875"
+         height="285.75"
+         x="270.93332"
+         y="-2.8421709e-14" />
+      <rect
+         style="fill:url(#linearGradient46);fill-opacity:1;stroke-width:0"
+         id="rect12"
+         width="29.36875"
+         height="285.75"
+         x="304.79999"
+         y="-2.8421709e-14" />
+      <rect
+         style="fill:url(#linearGradient47);fill-opacity:1;stroke-width:0"
+         id="rect13"
+         width="29.36875"
+         height="285.75"
+         x="338.66666"
+         y="-2.8421709e-14" />
+      <rect
+         style="fill:url(#linearGradient48);fill-opacity:1;stroke-width:0"
+         id="rect14"
+         width="29.36875"
+         height="285.75"
+         x="372.53333"
+         y="-2.8421709e-14" />
+      <rect
+         style="fill:url(#linearGradient49);fill-opacity:1;stroke-width:0"
+         id="rect15"
+         width="29.36875"
+         height="285.75"
+         x="406.39999"
+         y="-2.8421709e-14" />
+      <rect
+         style="fill:url(#linearGradient50);fill-opacity:1;stroke-width:0"
+         id="rect16"
+         width="29.36875"
+         height="285.75"
+         x="440.26666"
+         y="-2.8421709e-14" />
+      <rect
+         style="fill:url(#linearGradient51);fill-opacity:1;stroke-width:0"
+         id="rect17"
+         width="29.36875"
+         height="285.75"
+         x="474.13333"
+         y="-2.8421709e-14" />
+    </g>
+    <path
+       style="display:inline;fill:#d4d4d4;fill-opacity:1;stroke:#e8e8e8;stroke-width:3.91798;stroke-dasharray:none;stroke-opacity:1"
+       d="m 1.9520246,284.46513 0.5545323,-6.30568 46.6422671,-74.78386 18.814738,34.40081 62.027278,-71.80363 22.25337,41.78445 65.23623,-87.47353 25.99722,61.92435 83.9902,-103.225355 66.709,125.078595 L 465.59564,53.019125 430.61897,59.677481 505.9655,8.4391384 505.9911,101.99376 491.04808,65.623503 395.2531,242.00362 321.67321,125.36277 242.96125,213.96901 214.34327,169.13046 152.27556,238.10179 127.767,204.80985 65.743624,263.95878 46.897053,232.79622 1.9520246,284.46513"
+       id="path1"
+       sodipodi:nodetypes="cccccccccccccccccccccccc"
+       inkscape:label="trend" />
+    <g
+       id="g1"
+       inkscape:label="Quotes"
+       style="display:inline">
       <text
          xml:space="preserve"
-         style="font-size:39.7246px;font-family:'DM Mono';-inkscape-font-specification:'DM Mono';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#171717;stroke-width:0;fill-opacity:1;stroke:none;stroke-dasharray:none"
-         x="257.18539"
-         y="144.43022"
+         style="font-size:39.7015px;font-family:'DM Mono';-inkscape-font-specification:'DM Mono';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+         x="257.29437"
+         y="151.75157"
          id="text1"
-         transform="scale(1.0001843,0.99981574)"><tspan
+         transform="scale(1.0002569,0.99974316)"><tspan
            sodipodi:role="line"
            id="tspan1"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'DM Mono';-inkscape-font-specification:'DM Mono Medium';fill:#171717;stroke-width:0;fill-opacity:1;stroke:none;stroke-dasharray:none"
-           x="257.18539"
-           y="144.43022">Believe!</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'DM Mono';-inkscape-font-specification:'DM Mono Medium';fill:#171717;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+           x="257.29437"
+           y="151.75157">Believe!</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:25.8613px;font-family:'DM Mono';-inkscape-font-specification:'DM Mono';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#171717;stroke-width:0;fill-opacity:1;stroke:none;stroke-dasharray:none"
-         x="373.15826"
-         y="82.972412"
-         id="text2"><tspan
+         style="font-size:21.2919px;font-family:'DM Mono';-inkscape-font-specification:'DM Mono';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+         x="383.74832"
+         y="88.0252"
+         id="text2"
+         transform="scale(1.0000726,0.9999274)"><tspan
            sodipodi:role="line"
            id="tspan2"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'DM Mono';-inkscape-font-specification:'DM Mono Medium';stroke-width:0;fill:#171717;fill-opacity:1;stroke:none;stroke-dasharray:none"
-           x="373.15826"
-           y="82.972412">Don't Rush!</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'DM Mono';-inkscape-font-specification:'DM Mono Medium';fill:#171717;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+           x="383.74832"
+           y="88.0252">Don't Rush!</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:18.9226px;font-family:'DM Mono';-inkscape-font-specification:'DM Mono';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#171717;stroke-width:0;fill-opacity:1;stroke:none;stroke-dasharray:none"
-         x="394.52634"
-         y="188.43973"
-         id="text3"><tspan
+         style="font-size:18.9116px;font-family:'DM Mono';-inkscape-font-specification:'DM Mono';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+         x="394.55542"
+         y="188.33005"
+         id="text3"
+         transform="scale(1.0000726,0.9999274)"><tspan
            sodipodi:role="line"
            id="tspan3"
-           style="stroke-width:0;fill:#171717;fill-opacity:1;stroke:none;stroke-dasharray:none"
-           x="394.52634"
-           y="188.43973">Take it easy!</tspan></text>
+           style="fill:#171717;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+           x="394.55542"
+           y="188.33005">Take it easy!</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:17.7171px;font-family:'DM Mono';-inkscape-font-specification:'DM Mono';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#171717;stroke-width:0;fill-opacity:1;stroke:none;stroke-dasharray:none"
-         x="155.80988"
-         y="213.60214"
-         id="text4"><tspan
+         style="font-size:17.7068px;font-family:'DM Mono';-inkscape-font-specification:'DM Mono';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+         x="155.97791"
+         y="213.4778"
+         id="text4"
+         transform="scale(1.0000726,0.9999274)"><tspan
            sodipodi:role="line"
            id="tspan4"
-           style="stroke-width:0;fill:#171717;fill-opacity:1;stroke:none;stroke-dasharray:none"
-           x="155.80988"
-           y="213.60214">Don't</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'DM Mono';-inkscape-font-specification:'DM Mono Medium';fill:#171717;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+           x="155.97791"
+           y="213.4778">Don't</tspan><tspan
            sodipodi:role="line"
-           style="stroke-width:0;fill:#171717;fill-opacity:1;stroke:none;stroke-dasharray:none"
-           x="155.80988"
-           y="235.74852"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'DM Mono';-inkscape-font-specification:'DM Mono Medium';fill:#171717;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+           x="155.97791"
+           y="235.6113"
            id="tspan10">Overthink!</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:20.6266px;font-family:'DM Mono';-inkscape-font-specification:'DM Mono';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#171717;stroke-width:0;fill-opacity:1;stroke:none;stroke-dasharray:none"
-         x="56.025879"
-         y="153.0341"
-         id="text5"><tspan
+         style="font-size:20.6146px;font-family:'DM Mono';-inkscape-font-specification:'DM Mono';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#171717;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+         x="56.251991"
+         y="152.94502"
+         id="text5"
+         transform="scale(1.0000726,0.9999274)"><tspan
            sodipodi:role="line"
            id="tspan5"
-           style="text-align:start;text-anchor:start;stroke-width:0;fill:#171717;fill-opacity:1;stroke:none;stroke-dasharray:none"
-           x="56.025879"
-           y="153.0341">Stay</tspan><tspan
+           style="text-align:start;text-anchor:start;fill:#171717;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+           x="56.251991"
+           y="152.94502">Stay</tspan><tspan
            sodipodi:role="line"
-           style="text-align:start;text-anchor:start;stroke-width:0;fill:#171717;fill-opacity:1;stroke:none;stroke-dasharray:none"
-           x="56.025879"
-           y="178.81735"
+           style="text-align:start;text-anchor:start;fill:#171717;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+           x="56.251991"
+           y="178.71327"
            id="tspan9">calm!</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:30.2776px;font-family:'DM Mono';-inkscape-font-specification:'DM Mono';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#171717;stroke-width:0;fill-opacity:1;stroke:none;stroke-dasharray:none"
-         x="104.96674"
-         y="93.349007"
-         id="text6"><tspan
+         style="font-size:30.26px;font-family:'DM Mono';-inkscape-font-specification:'DM Mono';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+         x="133.20563"
+         y="89.288765"
+         id="text6"
+         transform="scale(1.0000726,0.9999274)"><tspan
            sodipodi:role="line"
            id="tspan6"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'DM Mono';-inkscape-font-specification:'DM Mono Medium';stroke-width:0;fill:#171717;fill-opacity:1;stroke:none;stroke-dasharray:none"
-           x="104.96674"
-           y="93.349007">Focus!</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'DM Mono';-inkscape-font-specification:'DM Mono Medium';fill:#171717;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+           x="133.20563"
+           y="89.288765">Focus!</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:15.4605px;font-family:'DM Mono';-inkscape-font-specification:'DM Mono';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#171717;stroke-width:0;fill-opacity:1;stroke:none;stroke-dasharray:none"
-         x="194.80321"
-         y="47.294086"
-         id="text7"><tspan
+         style="font-size:15.4515px;font-family:'DM Mono';-inkscape-font-specification:'DM Mono';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+         x="259.70187"
+         y="38.197052"
+         id="text7"
+         transform="scale(1.0000726,0.9999274)"><tspan
            sodipodi:role="line"
            id="tspan7"
-           style="stroke-width:0;fill:#171717;fill-opacity:1;stroke:none;stroke-dasharray:none"
-           x="194.80321"
-           y="47.294086">Clock is ticking!</tspan></text>
+           style="fill:#171717;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+           x="259.70187"
+           y="38.197052">Everything happens for a reason!</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:28.1171px;font-family:'DM Mono';-inkscape-font-specification:'DM Mono';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#171717;stroke-width:0;fill-opacity:1;stroke:none;stroke-dasharray:none"
-         x="336.91162"
-         y="238.85309"
-         id="text8"><tspan
+         style="font-size:28.1008px;font-family:'DM Mono';-inkscape-font-specification:'DM Mono';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#171717;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+         x="336.97424"
+         y="238.71407"
+         id="text8"
+         transform="scale(1.0000726,0.9999274)"><tspan
            sodipodi:role="line"
            id="tspan8"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'DM Mono';-inkscape-font-specification:'DM Mono Medium';stroke-width:0;fill:#171717;fill-opacity:1;stroke:none;stroke-dasharray:none"
-           x="336.91162"
-           y="238.85309">Take care!</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'DM Mono';-inkscape-font-specification:'DM Mono Medium';fill:#171717;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+           x="336.97424"
+           y="238.71407">Take care!</tspan></text>
     </g>
   </g>
 </svg>
