@@ -75,9 +75,8 @@ if confirm "Do you want to install Inkscape?"; then
     sudo apt install inkscape -y
 fi
 
-if confirm "Do you want to change screenshot/screencast utility to flameshot/kazam?"; then
-    sudo apt install flameshot kazam -y
-    sudo apt purge gnome-screenshot -y
+if confirm "Do you want to install Flameshot (screenshot tool)?"; then
+    sudo apt install flameshot -y
 fi
 
 # Install Espanso (text expander)
