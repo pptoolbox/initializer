@@ -177,7 +177,7 @@ elif [[ -z "$ans" ]]; then
         echo "sudo apt autopurge -y" >> ~/.local/bin/scleaner.sh
         echo "sudo apt autoclean -y" >> ~/.local/bin/scleaner.sh
         echo "sudo apt clean -y" >> ~/.local/bin/scleaner.sh
-        echo "echo "System cleanup completed."" >> ~/.local/bin/scleaner.sh
+        echo "echo 'System cleanup completed.'" >> ~/.local/bin/scleaner.sh
 
         chmod +x ~/.local/bin/scleaner.sh
 
