@@ -84,12 +84,12 @@ if confirm "Do you want to install Espanso (text expander)?"; then
     if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
         # Install Espanso for Wayland
         wget https://github.com/espanso/espanso/releases/latest/download/espanso-debian-wayland-amd64.deb
-        sudo apt install espanso-debian-wayland-amd64.deb -y
+        sudo apt install ./espanso-debian-wayland-amd64.deb -y
         rm espanso-debian-wayland-amd64.deb
     else
         # Install Espanso for X11
         wget https://github.com/espanso/espanso/releases/latest/download/espanso-debian-x11-amd64.deb
-        sudo apt install espanso-debian-x11-amd64.deb -y
+        sudo apt install ./espanso-debian-x11-amd64.deb -y
         rm espanso-debian-x11-amd64.deb
     fi
     espanso service register
