@@ -59,7 +59,7 @@ if [[ "$ans" == "yup" ]]; then
     espanso service register
     espanso start
 
-    sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/pptoolbox/esc/main/install.sh)"
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/pptoolbox/esc/main/install.sh)"
 
     sudo mv wallpapers /usr/local/share/
 
@@ -160,7 +160,7 @@ elif [[ -z "$ans" ]]; then
 
     # Install Espanso Shortcode Manager (TUI for Espanso)
     if confirm "Do you want to install Espanso Shortcode Manager/ESC (TUI for Espanso)?"; then
-        sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/pptoolbox/esc/main/install.sh)"
+        bash -c "$(curl -fsSL https://raw.githubusercontent.com/pptoolbox/esc/main/install.sh)"
     fi
 
     # Add wallpapers
