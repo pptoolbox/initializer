@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Updating the system and installing useful utilities?"
+echo "Updating the system and installing useful utilities..."
 
 # Upgrade System (Mandatory)
 sudo apt update
