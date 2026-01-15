@@ -19,7 +19,7 @@ confirm() {
 sudo dnf upgrade -y
 
 # Install/configure utilities and extensions (Mandatory)
-sudo dnf install curl wget dnf-plugins-core gparted gnome-tweaks gnome-extensions-app gnome-shell-extension-gsconnect gnome-shell-extension-gpaste -y
+sudo dnf install curl wget dnf-plugins-core gparted gnome-tweaks gnome-extensions-app gnome-shell-extension-gsconnect gnome-shell-extension-gpaste bleachbit -y
 
 # Install themes and cursors
 if confirm "Do you want to install papirus icon theme?"; then
