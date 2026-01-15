@@ -167,8 +167,13 @@ elif [[ -z "$ans" ]]; then
 
     # Add wallpapers
     if confirm "Do you want to install wallpapers?"; then
-        sudo mv wallpapers /usr/local/share/
+        if [[ -d wallpapers ]]; then
+            sudo mv wallpapers /usr/local/share/
+        else
+            echo "Wallpaper directory not found, skipping."
+        fi
     fi
+
 
     # Mandatory cleanup
     sudo apt purge snap snapd plasma-discover-backend-snap htop -y
