@@ -22,7 +22,7 @@ sudo apt update
 sudo apt full-upgrade -y
 
 # Install/configure utilities (Mandatory)
-sudo apt install curl wget gparted exfat-fuse exfatprogs -y
+sudo apt install curl wget gparted exfat-fuse exfatprogs bleachbit -y
 
 # Configure starship prompt
 if confirm "Do you want to configure starship prompt for bash?"; then
@@ -97,30 +97,11 @@ fi
 
 # Add wallpapers
 if confirm "Do you want to install wallpapers?"; then
-    sudo mv wallpapers /usr/local/share/
-fi
-
-# Create SCleaner script & desktop entry
-if confirm "Do you want to install SCleaner? (Recommended)"; then
-    mkdir -p ~/.local/bin
-echo "#!/bin/bash
-sudo apt update
-sudo apt autopurge -y
-sudo apt autoclean -y
-sudo apt clean -y
-echo "System cleanup completed."" >> ~/.local/bin/scleaner.sh
-
-chmod +x ~/.local/bin/scleaner.sh
-
-echo "[Desktop Entry]
-Version=1.0
-Type=Application
-Name=SCleaner
-Comment=Clean up system cache and unnecessary files
-Exec=/home/$USER/.local/bin/scleaner.sh
-Icon=sweeper
-Terminal=true
-Categories=Utility;" >> ~/.local/share/applications/scleaner.desktop
+    if [[ -d wallpapers ]]; then
+        sudo mv wallpapers /usr/local/share/
+    else
+        echo "Wallpaper directory not found, skipping."
+    fi
 fi
 
 # Cleanup
