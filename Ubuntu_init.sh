@@ -22,7 +22,7 @@ sudo apt update
 sudo apt full-upgrade -y
 
 # Install/configure utilities and extensions (Mandatory)
-sudo apt install curl wget gparted exfat-fuse exfatprogs showtime rhythmbox gnome-extensions gnome-shell-extension-gpaste gnome-shell-extension-ubuntu-tiling-assistant gnome-tweaks gnome-shell-extension-gsconnect -y
+sudo apt install curl wget gparted exfat-fuse exfatprogs showtime rhythmbox gnome-extensions gnome-shell-extension-gpaste gnome-shell-extension-ubuntu-tiling-assistant gnome-tweaks gnome-shell-extension-gsconnect bleachbit -y
 
 # Install themes and cursors
 if confirm "Do you want to install papirus icon theme?"; then
@@ -103,30 +103,11 @@ fi
 
 # Add wallpapers
 if confirm "Do you want to install wallpapers?"; then
-    sudo mv wallpapers /usr/local/share/
-fi
-
-# Create SCleaner script and desktop entry
-if confirm "Do you want to install SCleaner?"; then
-    mkdir -p ~/.local/bin
-echo "#!/bin/bash
-sudo apt update
-sudo apt autopurge -y
-sudo apt autoclean -y
-sudo apt clean -y
-echo "System cleanup completed."" >> ~/.local/bin/scleaner.sh
-
-chmod +x ~/.local/bin/scleaner.sh
-
-echo "[Desktop Entry]
-Version=1.0
-Type=Application
-Name=SCleaner
-Comment=Clean up system cache and unnecessary files
-Exec=/home/$USER/.local/bin/scleaner.sh
-Icon=sweeper
-Terminal=true
-Categories=Utility;" >> ~/.local/share/applications/scleaner.desktop
+    if [[ -d wallpapers ]]; then
+        sudo mv wallpapers /usr/local/share/
+    else
+        echo "Wallpaper directory not found, skipping."
+    fi
 fi
 
 # Mandetory cleanup
