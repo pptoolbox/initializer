@@ -9,7 +9,7 @@ sudo apt update
 sudo apt full-upgrade -y
 
 # Install/configure utilities (Mandatory)
-sudo apt install curl wget partitionmanager filelight exfat-fuse exfatprogs vlc kdeconnect okular okular-extra-backends -y
+sudo apt install curl wget partitionmanager filelight exfat-fuse exfatprogs vlc kdeconnect okular okular-extra-backends bleachbit -y
 
 # Prompt user for automated or manual setup
 echo "Do you want to do automated setup? (Type 'Yup' to proceed or [ENTER] to skip and continue manually)"
@@ -168,30 +168,6 @@ elif [[ -z "$ans" ]]; then
     # Add wallpapers
     if confirm "Do you want to install wallpapers?"; then
         sudo mv wallpapers /usr/local/share/
-    fi
-
-
-    # Create SCleaner script and desktop entry
-    if confirm "Do you want to install SCleaner?"; then
-        mkdir -p ~/.local/bin
-        echo "#!/bin/bash" >> ~/.local/bin/scleaner.sh
-        echo "sudo apt update" >> ~/.local/bin/scleaner.sh
-        echo "sudo apt autopurge -y" >> ~/.local/bin/scleaner.sh
-        echo "sudo apt autoclean -y" >> ~/.local/bin/scleaner.sh
-        echo "sudo apt clean -y" >> ~/.local/bin/scleaner.sh
-        echo "echo 'System cleanup completed.'" >> ~/.local/bin/scleaner.sh
-
-        chmod +x ~/.local/bin/scleaner.sh
-
-        echo "[Desktop Entry]" >> ~/.local/share/applications/scleaner.desktop
-        echo "Version=1.0" >> ~/.local/share/applications/scleaner.desktop
-        echo "Type=Application" >> ~/.local/share/applications/scleaner.desktop
-        echo "Name=SCleaner" >> ~/.local/share/applications/scleaner.desktop
-        echo "Comment=Clean up system cache and unnecessary files" >> ~/.local/share/applications/scleaner.desktop
-        echo "Exec=/home/$USER/.local/bin/scleaner.sh" >> ~/.local/share/applications/scleaner.desktop
-        echo "Icon=sweeper" >> ~/.local/share/applications/scleaner.desktop
-        echo "Terminal=true" >> ~/.local/share/applications/scleaner.desktop
-        echo "Categories=Utility;" >> ~/.local/share/applications/scleaner.desktop
     fi
 
     # Mandatory cleanup
