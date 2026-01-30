@@ -11,6 +11,10 @@ sudo apt full-upgrade -y
 # Install/configure utilities (Mandatory)
 sudo apt install curl wget partitionmanager filelight exfatprogs vlc kdeconnect okular okular-extra-backends bleachbit -y
 
+# Enable required services (Mandatory)
+sudo systemctl enable --now bluetooth.service
+cp /etc/xdg/autostart/org.kde.kdeconnect.daemon.desktop ~/.config/autostart
+
 # Prompt user for automated or manual setup
 echo "Do you want to do automated setup? (Type 'Yup' to proceed or [ENTER] to skip and continue manually)"
 read ans
