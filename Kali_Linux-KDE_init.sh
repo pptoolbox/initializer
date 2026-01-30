@@ -73,6 +73,7 @@ if [[ "$ans" == "yup" ]]; then
     fi
     espanso service register
     espanso start
+    echo 'show_notifications: false' >> ~/.config/espanso/config/default.yml && espanso restart
 
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/pptoolbox/esc/main/install.sh)"
 
@@ -164,6 +165,7 @@ elif [[ -z "$ans" ]]; then
         fi
         espanso service register
         espanso start
+        echo 'show_notifications: false' >> ~/.config/espanso/config/default.yml && espanso restart
     fi
 
     # Install Espanso Shortcode Manager (TUI for Espanso)
