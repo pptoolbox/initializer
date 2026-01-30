@@ -13,7 +13,21 @@ sudo apt install curl wget partitionmanager filelight exfatprogs vlc kdeconnect 
 
 # Enable required services (Mandatory)
 sudo systemctl enable --now bluetooth.service
-cp /etc/xdg/autostart/org.kde.kdeconnect.daemon.desktop ~/.config/autostart
+
+mkdir -p ~/.config/systemd/user
+echo "[Unit]
+Description=KDE Connect Daemon
+After=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/kdeconnectd
+Restart=on-failure
+
+[Install]
+WantedBy=default.target" >> ~/.config/systemd/user/kdeconnectd.service
+systemctl --user daemon-reexec
+systemctl --user enable kdeconnectd.service
+systemctl --user start kdeconnectd.service
 
 # Prompt user for automated or manual setup
 echo "Do you want to do automated setup? (Type 'Yup' to proceed or [ENTER] to skip and continue manually)"
