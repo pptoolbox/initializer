@@ -9,7 +9,7 @@ sudo apt update
 sudo apt full-upgrade -y
 
 # Install/configure utilities (Mandatory)
-sudo apt install curl wget partitionmanager filelight exfat-fuse exfatprogs vlc kdeconnect okular okular-extra-backends bleachbit -y
+sudo apt install curl wget kio-admin partitionmanager filelight exfat-fuse exfatprogs vlc kdeconnect okular bleachbit -y
 
 # Prompt user for automated or manual setup
 echo "Do you want to do automated setup? (Type 'Yup' to proceed or [ENTER] to skip and continue manually)"
