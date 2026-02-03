@@ -9,7 +9,7 @@ sudo apt update
 sudo apt full-upgrade -y
 
 # Install/configure utilities (Mandatory)
-sudo apt install curl wget kio-admin partitionmanager filelight exfatprogs vlc kdeconnect okular bleachbit -y
+sudo apt install curl wget kio-admin partitionmanager filelight exfatprogs vlc kdeconnect plasma-widgets-addons okular bleachbit -y
 
 # Enable required services (Mandatory)
 sudo systemctl enable --now bluetooth.service
