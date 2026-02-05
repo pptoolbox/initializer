@@ -9,11 +9,37 @@ sudo apt update
 sudo apt full-upgrade -y
 
 # Install/configure utilities (Mandatory)
-sudo apt install curl wget kio-admin partitionmanager filelight exfatprogs vlc kdeconnect plasma-widgets-addons okular bleachbit -y
+sudo apt install curl wget kio-admin partitionmanager filelight exfatprogs vlc kdeconnect plasma-widgets-addons okular starship zsh-autosuggestions -y
+
+# Configure shell
+mv ~/.zshrc ~/.zshrc_bak
+
+echo "# History configurations
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=2000
+setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt hist_ignore_dups       # ignore duplicated commands history list
+setopt hist_ignore_space      # ignore commands that start with space
+setopt hist_verify            # show command with history expansion to user before running it
+
+# Aliases
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Zsh autosuggestions
+if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+    source   /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+# Starship prompt
+eval "$(starship init zsh)"" >> ~/.zshrc
 
 # Enable required services (Mandatory)
 sudo systemctl enable --now bluetooth.service
 
+if [ ! -f ~/.config/systemd/user/kdeconnectd.service ]; then
 mkdir -p ~/.config/systemd/user
 echo "[Unit]
 Description=KDE Connect Daemon
@@ -25,6 +51,7 @@ Restart=on-failure
 
 [Install]
 WantedBy=default.target" >> ~/.config/systemd/user/kdeconnectd.service
+fi
 systemctl --user daemon-reexec
 systemctl --user enable kdeconnectd.service
 systemctl --user start kdeconnectd.service
