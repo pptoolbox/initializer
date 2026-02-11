@@ -9,7 +9,7 @@ sudo apt update
 sudo apt full-upgrade -y
 
 # Install/configure utilities (Mandatory)
-sudo apt install curl wget kio-admin partitionmanager filelight exfatprogs vlc kdeconnect plasma-widgets-addons okular starship zsh-autosuggestions -y
+sudo apt install curl wget kio-admin partitionmanager filelight exfatprogs vlc kdeconnect plasma-widgets-addons plasma-wallpapers-addons okular starship zsh-autosuggestions -y
 
 # Configure shell
 mv ~/.zshrc ~/.zshrc_bak
