@@ -64,6 +64,8 @@ ans=$(echo "$ans" | tr '[:upper:]' '[:lower:]')
 
 if [[ "$ans" == "yup" ]]; then
     sudo apt install papirus-icon-theme -y
+    git clone https://github.com/varlesh/papirus-colors.git
+    sudo mv papirus-colors/Papirus-Colors* /usr/share/icons
     sudo apt install bibata-cursor-theme -y
 
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
