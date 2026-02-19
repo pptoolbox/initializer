@@ -132,6 +132,8 @@ elif [[ -z "$ans" ]]; then
     # Install themes and cursors
     if confirm "Do you want to install papirus icon theme?"; then
         sudo apt install papirus-icon-theme papirus-colors -y
+        git clone https://github.com/varlesh/papirus-colors.git
+        sudo mv papirus-colors/Papirus-Colors* /usr/share/icons
     fi
 
     if confirm "Do you want to install bibata cursor theme?"; then
@@ -212,7 +214,10 @@ elif [[ -z "$ans" ]]; then
     fi
 
 
-    # Mandatory cleanup
+    # Finishing touches
+    mkdir -p ~/.local/share/applications/
+    cp /usr/share/applications/org.kde.dolphin.desktop ~/.local/share/applications/
+    desktop-file-edit --set-icon=system-file-manager ~/.local/share/applications/org.kde.dolphin.desktop
     sudo apt autopurge -y
     sudo apt clean
     sudo apt autoclean
