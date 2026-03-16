@@ -9,11 +9,11 @@ sudo systemctl enable --now snapper-cleanup.timer
 
 # Update system and install essential packages
 sudo pacman -Syu
-sudo pacman -Sy chromium gwenview okular kdeconnect inkscape vlc papirus-icon-theme filelight yakuake partitionmanager exfatprogs dosfstools ntfs-3g e2fsprogs btrfs-progs xfsprogs kio-admin git curl wget base-devel starship bash-completion
+sudo pacman -Sy firefox gwenview okular kdeconnect inkscape vlc papirus-icon-theme filelight yakuake partitionmanager exfatprogs dosfstools ntfs-3g e2fsprogs btrfs-progs xfsprogs kio-admin git curl wget base-devel sshfs starship bash-completion
 
 # Configure Starship prompt and bash completion
-echo "eval "$(starship init bash)"" >> .bashrc 
-echo "source /usr/share/bash-completion/bash_completion" >> .bashrc
+echo "eval "$(starship init bash)"" >> ~/.bashrc 
+echo "source /usr/share/bash-completion/bash_completion" >> ~/.bashrc
 
 # Install yay AUR helper
 git clone https://aur.archlinux.org/yay.git
@@ -21,7 +21,7 @@ cd yay
 makepkg -si
 
 # Install AUR packages
-yay -Sy brave-bin bibata-cursor-theme-bin ttf-dm-mono-git
+yay -Sy brave-bin bibata-cursor-theme-bin ttf-dm-mono-git papirus-colors-git
 
 # Cleanup unnecessary packages
 sudo pacman -Rns htop
