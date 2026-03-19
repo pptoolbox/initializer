@@ -34,7 +34,7 @@ if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
 fi
 
 # Starship prompt
-eval "$(starship init zsh)"" >> ~/.zshrc
+echo "eval "$(starship init zsh)"" >> ~/.zshrc
 
 # Enable required services (Mandatory)
 sudo systemctl enable --now bluetooth.service
