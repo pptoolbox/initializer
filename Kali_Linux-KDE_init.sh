@@ -9,52 +9,10 @@ sudo apt update
 sudo apt full-upgrade -y
 
 # Install/configure utilities (Mandatory)
-sudo apt install curl wget kio-admin partitionmanager filelight exfatprogs vlc kdeconnect plasma-widgets-addons plasma-wallpapers-addons okular starship zsh-autosuggestions -y
-
-# Configure shell
-mv ~/.zshrc ~/.zshrc_bak
-
-echo "# History configurations
-HISTFILE=~/.zsh_history
-HISTSIZE=1000
-SAVEHIST=2000
-setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
-setopt hist_ignore_dups       # ignore duplicated commands history list
-setopt hist_ignore_space      # ignore commands that start with space
-setopt hist_verify            # show command with history expansion to user before running it
-
-# Aliases
-alias ll='ls -l'
-alias la='ls -A'
-alias l='ls -CF'
-
-# Zsh autosuggestions
-if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-    source   /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-fi
-
-# Starship prompt
-echo "eval "$(starship init zsh)"" >> ~/.zshrc
+sudo apt install curl wget kio-admin partitionmanager filelight exfatprogs vlc kdeconnect plasma-widgets-addons plasma-wallpapers-addons okular zsh-autosuggestions -y
 
 # Enable required services (Mandatory)
 sudo systemctl enable --now bluetooth.service
-
-if [ ! -f ~/.config/systemd/user/kdeconnectd.service ]; then
-mkdir -p ~/.config/systemd/user
-echo "[Unit]
-Description=KDE Connect Daemon
-After=graphical-session.target
-
-[Service]
-ExecStart=/usr/bin/kdeconnectd
-Restart=on-failure
-
-[Install]
-WantedBy=default.target" >> ~/.config/systemd/user/kdeconnectd.service
-fi
-systemctl --user daemon-reexec
-systemctl --user enable kdeconnectd.service
-systemctl --user start kdeconnectd.service
 
 # Prompt user for automated or manual setup
 echo "Do you want to do automated setup? (Type 'Yup' to proceed or [ENTER] to skip and continue manually)"
@@ -63,19 +21,11 @@ read ans
 ans=$(echo "$ans" | tr '[:upper:]' '[:lower:]')
 
 if [[ "$ans" == "yup" ]]; then
-    sudo apt install papirus-icon-theme -y
-    git clone https://github.com/varlesh/papirus-colors.git
-    sudo mv papirus-colors/Papirus-Colors* /usr/share/icons
     sudo apt install bibata-cursor-theme -y
 
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     sudo apt install ./google-chrome-stable_current_amd64.deb -y
     rm google-chrome-stable_current_amd64.deb
-
-    sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-    sudo curl -fsSLo /etc/apt/sources.list.d/brave-browser-release.sources https://brave-browser-apt-release.s3.brave.com/brave-browser.sources
-    sudo apt update
-    sudo apt install brave-browser -y
 
     wget https://github.com/ONLYOFFICE/DesktopEditors/releases/latest/download/onlyoffice-desktopeditors_amd64.deb
     sudo apt install ./onlyoffice-desktopeditors_amd64.deb -y
@@ -102,7 +52,7 @@ if [[ "$ans" == "yup" ]]; then
     fi
     espanso service register
     espanso start
-    echo 'show_notifications: false' >> ~/.config/espanso/config/default.yml && espanso restart
+    echo "show_notifications: false" >> ~/.config/espanso/config/default.yml && espanso restart
 
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/pptoolbox/esc/main/install.sh)"
 
@@ -113,7 +63,7 @@ if [[ "$ans" == "yup" ]]; then
     sudo apt clean
     sudo apt autoclean
 
-    echo "Kubuntu initialization completed. Enjoy!"
+    echo "Kali Linux KDE initialization completed. Enjoy!"
 elif [[ -z "$ans" ]]; then
     confirm() {
         while true; do
@@ -130,12 +80,6 @@ elif [[ -z "$ans" ]]; then
     }
 
     # Install themes and cursors
-    if confirm "Do you want to install papirus icon theme?"; then
-        sudo apt install papirus-icon-theme papirus-colors -y
-        git clone https://github.com/varlesh/papirus-colors.git
-        sudo mv papirus-colors/Papirus-Colors* /usr/share/icons
-    fi
-
     if confirm "Do you want to install bibata cursor theme?"; then
         sudo apt install  bibata-cursor-theme -y
     fi
@@ -146,14 +90,6 @@ elif [[ -z "$ans" ]]; then
 
         sudo apt install ./google-chrome-stable_current_amd64.deb -y
         rm google-chrome-stable_current_amd64.deb
-    fi
-
-    if confirm "Do you want to download and install Brave Browser?"; then
-        sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-        sudo curl -fsSLo /etc/apt/sources.list.d/brave-browser-release.sources https://brave-browser-apt-release.s3.brave.com/brave-browser.sources
-
-        sudo apt update
-        sudo apt install brave-browser -y
     fi
 
     if confirm "Do you want to download and install ONLYOFFICE (MS Office Alternative)?"; then
@@ -176,11 +112,6 @@ elif [[ -z "$ans" ]]; then
         sudo apt install inkscape -y
     fi
 
-    # Install Yakuake (Dropdown terminal emulator)
-    if confirm "Do you want to install Yakuake (dropdown terminal emulator)?"; then
-        sudo apt install yakuake -y
-    fi
-
     # Install Espanso (text expander)
     if confirm "Do you want to install Espanso (text expander)?"; then
         if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
@@ -196,7 +127,7 @@ elif [[ -z "$ans" ]]; then
         fi
         espanso service register
         espanso start
-        echo 'show_notifications: false' >> ~/.config/espanso/config/default.yml && espanso restart
+        echo "show_notifications: false" >> ~/.config/espanso/config/default.yml && espanso restart
     fi
 
     # Install Espanso Shortcode Manager (TUI for Espanso)
@@ -215,14 +146,11 @@ elif [[ -z "$ans" ]]; then
 
 
     # Finishing touches
-    mkdir -p ~/.local/share/applications/
-    cp /usr/share/applications/org.kde.dolphin.desktop ~/.local/share/applications/
-    desktop-file-edit --set-icon=system-file-manager ~/.local/share/applications/org.kde.dolphin.desktop
     sudo apt autopurge -y
     sudo apt clean
     sudo apt autoclean
 
-    echo "Kubuntu initialization completed. Enjoy!"
+    echo "Kali Linux KDE initialization completed. Enjoy!"
 else
     echo "Invalid input. Please run the script again and provide a valid response."
 fi
