@@ -46,14 +46,6 @@ if confirm "Do you want to download and install Brave Browser?"; then
     sudo apt install brave-browser -y
 fi
 
-if confirm "Do you want to download and install ONLYOFFICE (MS Office Alternative)?"; then
-    wget https://github.com/ONLYOFFICE/DesktopEditors/releases/latest/download/onlyoffice-desktopeditors_amd64.deb
-
-    sudo apt install ./onlyoffice-desktopeditors_amd64.deb -y
-    rm onlyoffice-desktopeditors_amd64.deb
-    sudo apt purge libreoffice libreoffice-* -y
-fi
-
 if confirm "Do you want to download and install Visual Studio Code?"; then
     sudo apt install build-essential make cmake gcc g++ -y
     wget "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" -O vscode-stable_current_amd64.deb

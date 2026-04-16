@@ -44,12 +44,8 @@ if confirm "Do you want to download and install Brave Browser?"; then
     sudo dnf install brave-browser -y
 fi
 
-if confirm "Do you want to download and install ONLYOFFICE (MS Office Alternative)?"; then
-    wget https://github.com/ONLYOFFICE/DesktopEditors/releases/latest/download/onlyoffice-desktopeditors.x86_64.rpm
-
-    sudo dnf install ./onlyoffice-desktopeditors.x86_64.rpm -y
-    rm onlyoffice-desktopeditors.x86_64.rpm
-    sudo dnf remove libreoffice-* -y
+if confirm "Do you want to download and install Libreoffice (MS Office Alternative)?"; then
+    sudo dnf install libreoffice libreoffice-gnome -y
 fi
 
 if confirm "Do you want to download and install Visual Studio Code?"; then

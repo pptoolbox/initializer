@@ -27,10 +27,7 @@ if [[ "$ans" == "yup" ]]; then
     sudo apt install ./google-chrome-stable_current_amd64.deb -y
     rm google-chrome-stable_current_amd64.deb
 
-    wget https://github.com/ONLYOFFICE/DesktopEditors/releases/latest/download/onlyoffice-desktopeditors_amd64.deb
-    sudo apt install ./onlyoffice-desktopeditors_amd64.deb -y
-    rm onlyoffice-desktopeditors_amd64.deb
-    sudo apt purge libreoffice libreoffice-* -y
+    sudo apt install libreoffice libreoffice-kf6 -y
 
     sudo apt install build-essential make cmake gcc g++ -y
     wget "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" -O vscode-stable_current_amd64.deb
@@ -92,12 +89,8 @@ elif [[ -z "$ans" ]]; then
         rm google-chrome-stable_current_amd64.deb
     fi
 
-    if confirm "Do you want to download and install ONLYOFFICE (MS Office Alternative)?"; then
-        wget https://github.com/ONLYOFFICE/DesktopEditors/releases/latest/download/onlyoffice-desktopeditors_amd64.deb
-
-        sudo apt install ./onlyoffice-desktopeditors_amd64.deb -y
-        rm onlyoffice-desktopeditors_amd64.deb
-        sudo apt purge libreoffice libreoffice-* -y
+    if confirm "Do you want to download and install Libreoffice (MS Office Alternative)?"; then
+        sudo apt install libreoffice libreoffice-kf6 -y
     fi
 
     if confirm "Do you want to download and install Visual Studio Code?"; then

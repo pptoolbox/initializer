@@ -8,7 +8,7 @@ sudo systemctl enable --now snapper-timeline.timer
 sudo systemctl enable --now snapper-cleanup.timer
 
 # Update system and install essential packages
-sudo pacman -Syu firefox gwenview okular kdeconnect inkscape vlc papirus-icon-theme filelight yakuake partitionmanager exfatprogs dosfstools ntfs-3g e2fsprogs btrfs-progs xfsprogs kio-admin git curl wget base-devel sshfs tesseract-data-eng tesseract-data-ben starship bash-completion
+sudo pacman -Syu firefox gwenview okular kdeconnect inkscape libreoffice libreoffice-kf6 vlc papirus-icon-theme filelight yakuake partitionmanager exfatprogs dosfstools ntfs-3g e2fsprogs btrfs-progs xfsprogs kio-admin git curl wget base-devel sshfs tesseract-data-eng tesseract-data-ben starship bash-completion
 
 # Configure Starship prompt and bash completion
 echo "eval "$(starship init bash)"" >> ~/.bashrc 
